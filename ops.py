@@ -1,4 +1,10 @@
-opnums = {"1" : "ADD", "2" : "SUB", "3" : "CALL", "4" : "STORE"}
+#op values
+opnums = {
+    "1" : "ADD",
+    "2" : "SUB",
+    "3" : "CALL",
+    "4" : "STORE"
+}
 def getop(code):
     try:
         opnumber = code.split()[0]
