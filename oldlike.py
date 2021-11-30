@@ -1,3 +1,4 @@
+#import operations library
 try:
     import ops
 except:
@@ -5,12 +6,15 @@ except:
     quit()
 import sys
 
+#get args
 args = sys.argv
 
+#check if args are invalid
 if len(args) < 2:
     print("Args missing!!!")
     quit()
 
+#get code to run
 try:
     file = open(args[1], 'r')
     codefile = file.readlines()
@@ -19,13 +23,16 @@ except:
     print("Error getting file!!!")
     quit()
 
+#init variables used by operations
 lineret = [""]
 line = 0
 for code in codefile:
+    #get needed info
     line += 1
     op = ops.getop(code)
     code = code.strip()
     varcount = 0
+    #variables
     for value in lineret:
         code = code.replace("ln" + str(varcount), lineret[varcount])
         varcount += 1
@@ -50,5 +57,6 @@ for code in codefile:
         out = "null"
         lineret.append(out)
     else:
+        #error
         print("error on line " + str(line))
         quit()
