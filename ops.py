@@ -1,0 +1,21 @@
+opnums = {"1" : "ADD", "2" : "SUB", "3" : "CALL", "4" : "STORE"}
+def getop(code):
+    try:
+        opnumber = code.split()[0]
+    except:
+        opnumber = "none"
+    for opnum in opnums:
+        if opnumber == "none":
+            break
+        if opnumber == opnum:
+            return opnums[opnum]
+
+def ADD(num1: int, num2: int) -> str:
+    return str(num1 + num2)
+def SUB(num1: int, num2: int) -> str:
+    return str(num1 - num2)
+def CALL(linenum: int, ret) -> str:
+    print(ret[linenum])
+    return str(ret[linenum])
+def STORE(inp):
+    return(inp)
