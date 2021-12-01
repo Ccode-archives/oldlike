@@ -22,7 +22,7 @@ def ADD(num1: float, num2: float) -> str:
     return str(num1 + num2)
 def SUB(num1: float, num2: float) -> str:
     return str(num1 - num2)
-def CALL(linenum: float, ret) -> str:
+def CALL(linenum: int, ret) -> str:
     print(ret[linenum])
     return str(ret[linenum])
 def STORE(inp):
