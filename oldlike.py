@@ -28,7 +28,7 @@ except:
     quit()
 
 #init variables used by operations
-lineret = [""]
+lineret = ["dev0.1"]
 line = 0
 for code in codefile:
     #get needed info
