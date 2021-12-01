@@ -1,7 +1,7 @@
 # oldlike
 A programming language based off of many old languages
 # what it does
-> ⚠️ Oldlike is based off of old languages and it never meant to be used in production!!!  
+> ⚠️ Oldlike is based off of old languages and is never meant to be used in production!!!  
 
 It stores the output from all operations executed in a line return variable.  
 Operations all have a number asigned to execute them.
