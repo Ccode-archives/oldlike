@@ -63,7 +63,7 @@ for code in codefile:
             error("To many arguments", line)
         if any(c.isalpha() for c in code):
             error("No letters please", line)
-        ops.CALL(float(nums[1]), lineret)
+        ops.CALL(int(nums[1]), lineret)
         lineret.append("null")
     elif op == "STORE":
         values = code.split(" ", 1)[1]
