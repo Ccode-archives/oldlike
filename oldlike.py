@@ -1,14 +1,14 @@
 #import operations library
+import sys
 try:
     import ops
 except:
     print("Please run in main project folder!!!")
-    quit()
-import sys
+    sys.exit()
 
 def error(errname: str, linenumber: int):
     print(errname + " error on line " + str(linenumber))
-    quit()
+    sys.exit()
 
 #get args
 args = sys.argv
@@ -16,7 +16,7 @@ args = sys.argv
 #check if args are invalid
 if len(args) > 2 or len(args) < 2:
     print("Args missing!!!")
-    quit()
+    sys.exit()
 
 #get code to run
 try:
@@ -25,7 +25,7 @@ try:
     file.close()
 except:
     print("Error getting file!!!")
-    quit()
+    sys.exit()
 
 #init variables used by operations
 lineret = ["dev0.1"]
