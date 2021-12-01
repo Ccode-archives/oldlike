@@ -47,7 +47,7 @@ for code in codefile:
             error("To many arguments", line)
         if any(c.isalpha() for c in code):
             error("No letters please", line)
-        out = ops.ADD(int(nums[1]), int(nums[2]))
+        out = ops.ADD(float(nums[1]), float(nums[2]))
         lineret.append(out)
     elif op == "SUB":
         nums = code.split()
@@ -55,7 +55,7 @@ for code in codefile:
             error("To many arguments", line)
         if any(c.isalpha() for c in code):
             error("No letters please", line)
-        out = ops.SUB(int(nums[1]), int(nums[2]))
+        out = ops.SUB(float(nums[1]), float(nums[2]))
         lineret.append(out)
     elif op == "CALL":
         nums = code.split()
@@ -63,7 +63,7 @@ for code in codefile:
             error("To many arguments", line)
         if any(c.isalpha() for c in code):
             error("No letters please", line)
-        ops.CALL(int(nums[1]), lineret)
+        ops.CALL(float(nums[1]), lineret)
         lineret.append("null")
     elif op == "STORE":
         values = code.split(" ", 1)[1]
@@ -75,7 +75,7 @@ for code in codefile:
             error("To many arguments", line)
         if any(c.isalpha() for c in code):
             error("No letters please", line)
-        out = ops.MULT(int(nums[1]), int(nums[2]))
+        out = ops.MULT(float(nums[1]), float(nums[2]))
         lineret.append(out)
     elif op == "DIV":
         nums = code.split()
@@ -83,7 +83,7 @@ for code in codefile:
             error("To many arguments", line)
         if any(c.isalpha() for c in code):
             error("No letters please", line)
-        out = ops.DIV(int(nums[1]), int(nums[2]))
+        out = ops.DIV(float(nums[1]), float(nums[2]))
         lineret.append(out)
     elif code == "" or code.startswith(";"):
         out = "null"
