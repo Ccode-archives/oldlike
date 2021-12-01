@@ -61,4 +61,4 @@ for code in codefile:
         out = "null"
         lineret.append(out)
     else:
-        error("Op not found ")
+        error("Op not found", line)
