@@ -14,7 +14,7 @@ def error(errname: str, linenumber: int):
 args = sys.argv
 
 #check if args are invalid
-if len(args) < 2:
+if len(args) > 2 or len(args) < 2:
     print("Args missing!!!")
     quit()
 
@@ -43,18 +43,33 @@ for code in codefile:
     out = ""
     if op == "ADD":
         nums = code.split()
+        if len(nums) > 3:
+            error("To many arguments", line)
+        if any(c.isalpha() for c in code):
+            error("No letters please", line)
         out = ops.ADD(int(nums[1]), int(nums[2]))
         lineret.append(out)
     elif op == "SUB":
         nums = code.split()
+        if len(nums) > 3:
+            error("To many arguments", line)
+        if any(c.isalpha() for c in code):
+            error("No letters please", line)
         out = ops.SUB(int(nums[1]), int(nums[2]))
         lineret.append(out)
     elif op == "CALL":
         nums = code.split()
+        if len(nums) > 2:
+            error("To many arguments", line)
+        if any(c.isalpha() for c in code):
+            error("No letters please", line)
         ops.CALL(int(nums[1]), lineret)
         lineret.append("null")
     elif op == "STORE":
         values = code.split(" ", 1)[1]
+        codeargs = len(code.split())
+        if codeargs > 2:
+            error("To many arguments", line)
         out = ops.STORE(values)
         lineret.append(out)
     elif code == "" or code.startswith(";"):
