@@ -3,7 +3,7 @@ opnums = {
     "1" : "ADD",
     "2" : "SUB",
     "3" : "CALL",
-    "4" : "STORE"
+    "4" : "STORE",
     "5" : "MULT"
 }
 def getop(code):
