@@ -4,7 +4,8 @@ opnums = {
     "2" : "SUB",
     "3" : "CALL",
     "4" : "STORE",
-    "5" : "MULT"
+    "5" : "MULT",
+    "6" : "DIV"
 }
 def getop(code):
     try:
@@ -28,3 +29,5 @@ def STORE(inp):
     return(inp)
 def MULT(num1: int, num2: int) -> str:
     return str(num1 * num2)
+def DIV(num1: int, num2: int) -> str:
+    return str(num1 / num2)
