@@ -23,13 +23,21 @@ Store stores it's input in line return as output for that line.
 ```
 4 <value>
 ```
+## Mult operation
+```
+5 <num1> <num2>
+```
+## Div operation
+```
+6 <num1> <num2>
+```
 ## Comments
 ```
 ; this is a comment
 ```
 ## Get values from line return
 ```
-ln<line number>
+ln<line number>$
 ```
 example:
 ```
