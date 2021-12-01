@@ -8,6 +8,7 @@ import sys
 
 def error(errname: str, linenumber: int):
     print(errname + " error on line " + str(linenumber))
+    quit()
 
 #get args
 args = sys.argv
