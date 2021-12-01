@@ -67,9 +67,6 @@ for code in codefile:
         lineret.append("null")
     elif op == "STORE":
         values = code.split(" ", 1)[1]
-        codeargs = len(code.split())
-        if codeargs > 2:
-            error("To many arguments", line)
         out = ops.STORE(values)
         lineret.append(out)
     elif code == "" or code.startswith(";"):
