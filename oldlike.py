@@ -6,6 +6,9 @@ except:
     quit()
 import sys
 
+def error(errname: str, linenumber: int):
+    print(errname + " error on line " + str(linenumber))
+
 #get args
 args = sys.argv
 
@@ -57,6 +60,4 @@ for code in codefile:
         out = "null"
         lineret.append(out)
     else:
-        #error
-        print("error on line " + str(line))
-        quit()
+        error("Op not found ")
