@@ -69,6 +69,14 @@ for code in codefile:
         values = code.split(" ", 1)[1]
         out = ops.STORE(values)
         lineret.append(out)
+    elif op == "MULT":
+        nums = code.split()
+        if len(nums) > 3:
+            error("To many arguments", line)
+        if any(c.isalpha() for c in code):
+            error("No letters please", line)
+        out = ops.MULT(int(nums[1]), int(nums[2]))
+        lineret.append(out)
     elif code == "" or code.startswith(";"):
         out = "null"
         lineret.append(out)
