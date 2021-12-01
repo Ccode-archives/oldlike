@@ -38,7 +38,7 @@ for code in codefile:
     varcount = 0
     #variables
     for value in lineret:
-        code = code.replace("ln" + str(varcount), lineret[varcount])
+        code = code.replace("ln" + str(varcount) + "$", lineret[varcount])
         varcount += 1
     out = ""
     if op == "ADD":
