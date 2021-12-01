@@ -18,16 +18,16 @@ def getop(code):
         if opnumber == opnum:
             return opnums[opnum]
 
-def ADD(num1: int, num2: int) -> str:
+def ADD(num1: float, num2: float) -> str:
     return str(num1 + num2)
-def SUB(num1: int, num2: int) -> str:
+def SUB(num1: float, num2: float) -> str:
     return str(num1 - num2)
-def CALL(linenum: int, ret) -> str:
+def CALL(linenum: float, ret) -> str:
     print(ret[linenum])
     return str(ret[linenum])
 def STORE(inp):
     return(inp)
-def MULT(num1: int, num2: int) -> str:
+def MULT(num1: float, num2: float) -> str:
     return str(num1 * num2)
-def DIV(num1: int, num2: int) -> str:
+def DIV(num1: float, num2: float) -> str:
     return str(num1 / num2)
