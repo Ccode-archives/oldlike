@@ -63,6 +63,8 @@ for code in codefile:
             error("To many arguments", line)
         if any(c.isalpha() for c in code):
             error("No letters please", line)
+        if int(nums[1]) > line:
+            error("Line return slot missing")
         ops.CALL(int(nums[1]), lineret)
         lineret.append("null")
     elif op == "STORE":
